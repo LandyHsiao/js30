@@ -1,0 +1,126 @@
+// fonts
+$display-font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+  7: $font-size-base,
+  8: $font-size-base * 0.875
+);
+
+$custom-font-sizes: (
+  7: $font-size-base,
+  // 16
+  8: $font-size-base * 0.875
+  // 14
+);
+$font-sizes: map-merge($font-sizes, $custom-font-sizes);
+
+// spacer = 1rem(16px), but it's easier to count if spacer = 4px
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  // 4
+  2: $spacer * 0.5,
+  // 8
+  3: $spacer * 0.75,
+  // 12
+  4: $spacer,
+  // 16
+  5: $spacer * 1.25,
+  // 20
+  6: $spacer * 1.5,
+  // 24
+  7: $spacer * 1.75,
+  // 28
+  8: $spacer * 2,
+  // 32
+  9: $spacer * 2.25,
+  // 36
+  10: $spacer * 2.5,
+  // 40
+  105: $spacer * 2.625,
+  // 42
+  11: $spacer * 2.75,
+  // 44
+  12: $spacer * 3,
+  // 48
+  13: $spacer * 3.25,
+  // 52
+  14: $spacer * 3.5,
+  // 56
+  15: $spacer * 3.75,
+  // 60
+  16: $spacer * 4,
+  // 64
+  17: $spacer * 4.25,
+  // 68
+  18: $spacer * 4.5,
+  // 72
+  19: $spacer * 4.75,
+  // 76
+  20: $spacer * 5,
+  // 80
+  25: $spacer * 6.25,
+  // 100
+  30: $spacer * 7.5 // 120,
+);
+
+// letter spacing
+$letter-spacings: (
+    h: 0.05em,
+    p: 0.03em,
+    1: normal
+);
+
+// utitlity map pre defined
+// this will be auto merged with BS's default $utitlities in _utilities.scss
+$utilities: (
+  "font-size": (
+    rfs: false,
+    responsive: true,
+    property: font-size,
+    class: fs,
+    values: $font-sizes,
+  ),
+  "font-weight": (
+    responsive: true,
+    property: font-weight,
+    class: fw,
+    values: (
+      lighter: $font-weight-lighter,
+      light: $font-weight-light,
+      normal: $font-weight-normal,
+      medium: $font-weight-medium,
+      semibold: $font-weight-semibold,
+      bold: $font-weight-bold,
+      bolder: $font-weight-bolder,
+    ),
+  ),
+  "width": (
+    responsive: true,
+    property: width,
+    class: w,
+    values: (
+      25: 25%,
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      auto: auto
+    )
+  ),
+  "max-width": (
+    responsive: true,
+    property: max-width,
+    class: mw,
+    values: (100: 100%)
+  ),
+  "border-width": (
+    responsive: true,
+    property: border-width,
+    class: border,
+    values: $border-widths
+  ),
+);
